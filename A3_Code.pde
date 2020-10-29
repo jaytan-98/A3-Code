@@ -218,7 +218,5 @@ class Snowflake {
    ellipse(xPos, yPos, 5,5);
    yPos += fallSpeed;
    xPos += driftSpeed;
-   } else {
-    fill (sky, 200, 200); } //Hide snowflakes
-  }
+   } 
 }
