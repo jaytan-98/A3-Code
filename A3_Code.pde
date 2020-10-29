@@ -18,7 +18,7 @@ void setup() {
   size(600, 600);
   
   clouds = loadImage("clouds.png");
-  frameRate(60); //animation frames per second
+  frameRate(60); //Animation frames per second
   x = width;
   
  
