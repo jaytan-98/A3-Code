@@ -27,6 +27,7 @@ void setup() {
   }
 }
 
+
 void draw() {
  background(#1ADBEA);
   
@@ -176,7 +177,7 @@ void draw() {
  ellipse(500, 500, 90, 50);
  
  //Lake
- fill(#51adcf, 200); //Translucent
+ fill(#51adcf, 200); 
  rect(0, 500, 600, 200);
   
   
