@@ -118,9 +118,9 @@ void draw() {
   
   
  //Clouds
- x = x+1; 
+ x = x+1; //Sets the speed of the clouds
  if (x >= width+50) {
-   x = -200; //Clouds will reset on x-axis
+   x = -200; //This function resets clouds once they exit off the screen 
  }
   
  image(clouds, x-100, 250, 100, 40);
@@ -130,10 +130,10 @@ void draw() {
   
   
  //Animate Car
- car = car + 1.5;
+ car = car + 1.5; //Sets the speed of the car
   
  if (car >= width+200) {
-  car = 0; //Car will reset on x-axis
+  car = 0; //This function resets car to starting point 
  }
   
  fill(169, 169, 169);
@@ -205,20 +205,20 @@ class Snowflake {
  float xPos, yPos, driftSpeed, fallSpeed;
   
  Snowflake(){
-  xPos = random(-height/4,width);
+  xPos = random(-height/4,width); 
   yPos = 0;
   driftSpeed = random(1, 3);
   fallSpeed = random(1, 5);
  }
   
  void renderSnowflake(){
-  if (mousePressed == true) {
+  if (mousePressed == true) { //Display snowflakes whem mouse button is pressed
    noStroke();
    fill (255);
    ellipse(xPos, yPos, 5,5);
    yPos += fallSpeed;
    xPos += driftSpeed;
    } else {
-    fill (sky, 200, 200); } 
+    fill (sky, 200, 200); } //Hide snowflakes
   }
 }
