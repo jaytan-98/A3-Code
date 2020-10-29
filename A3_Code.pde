@@ -19,7 +19,7 @@ int lightOrange = #ffa62b;
 int lightGreen = #499B8B;
 
 ArrayList<Snowflake> listOfFlakes = new ArrayList<Snowflake>(); 
-int numberOfFlakes = 100;
+int numberOfFlakes = 100; //Sets the number of snowflakes that appear on screen
 
 
 void setup() {
@@ -31,7 +31,7 @@ void setup() {
   
  
   for (int iter = 0; iter<numberOfFlakes; iter++) {
-    listOfFlakes.add(new Snowflake());
+    listOfFlakes.add(new Snowflake()); 
   }
 }
 
@@ -48,7 +48,7 @@ void draw() {
  //Mountain Rings
  noFill();
  strokeWeight(5); 
- float ringSize = constrain(mouseX, -0, 280); // Restrict ring size
+ float ringSize = constrain(mouseX, -0, 280); //Restrict ring size
   
  //Outer Ring
  stroke(#6d597a); 
@@ -68,7 +68,7 @@ void draw() {
   
  //Sun
  noStroke(); 
- float sunConstrainX = constrain(mouseX, 80, 520); // Restrict Sun movement 
+ float sunConstrainX = constrain(mouseX, 80, 520); //Restrict Sun movement on x-axis
   
  fill(255);
  ellipse(sunConstrainX, 100, 100, 100);
@@ -80,7 +80,7 @@ void draw() {
   
  //Eclipsing Circle
  noStroke(); 
- float eclipseI = width - mouseX; // Inverse mouseX
+ float eclipseI = width - mouseX; // Inverse mouseX for eclipse to move in opposite direction of Sun
   
  fill(sky, 200, 200);
  ellipse(eclipseI, 100, 115, 115);
@@ -117,10 +117,10 @@ void draw() {
  triangle(295, 323, 229, 500, 420, 500);
   
   
- //Animate Clouds
+ //Clouds
  x = x+1; 
  if (x >= width+50) {
-   x = -200;
+   x = -200; //Clouds will reset on x-axis
  }
   
  image(clouds, x-100, 250, 100, 40);
@@ -133,7 +133,7 @@ void draw() {
  car = car + 1.5;
   
  if (car >= width+200) {
-  car = 0;
+  car = 0; //Car will reset on x-axis
  }
   
  fill(169, 169, 169);
