@@ -1,11 +1,3 @@
-/***************************************************************************************
-*    Title: Snowy Mountains
-*    Author: Casey Weber
-*    Date: 2018
-*    Licence: Creative Commons Attribution ShareAlike
-*    Availability: https://www.openprocessing.org/sketch/591224
-***************************************************************************************/
-
 float sky;
 float car;
 float x;
